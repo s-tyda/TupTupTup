@@ -4,6 +4,14 @@ Komenda do odpalenia:
 ```bash
 docker-compose -f docker-compose.yml up -d --build
 ```
+Gaszenie kontenerów:
+```bash
+docker-compose down -v
+```
+Logi:
+```bash
+docker-compose logs -f
+```
 Link do testu aplikacji:  
 http://fastapi.localhost:8008
 
