@@ -1,0 +1,274 @@
+:root[theme='default']{
+    --background: none;
+    --background-color: black;
+    --background-repeat: none;
+    --button-color: black;
+    --button-color-on-hover: black;
+    --button-text-color: black;
+    --button-border-color: black;
+    --dropdown-color: black;
+    --dropdown-color-on-hover: black;
+    --dropdown-text-color: black;
+    --footer-color: black;
+    --footer-copyright-color: black;
+    --footer-copyright-two-numbers: black;
+    --font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+:root[theme='wck:p']{
+    --background: none;
+    --background-color: #D0426D;
+    --background-repeat: none;
+    --button-color: #E0839F;
+    --button-color-on-hover: #EEADC0;
+    --button-text-color: black;
+    --button-border-color: #7E0026;
+    --cursor: pointer;
+    --dropdown-color: #EEADC0;
+    --dropdown-color-on-hover: #BA4F6F;
+    --dropdown-text-color: black;
+    --footer-color: black;
+    --footer-copyright-color: black;
+    --footer-copyright-two-numbers: black;
+    --font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+:root[theme='tydzior']{
+    --background: none;
+    --background-color: black;
+    --background-repeat: none;
+    --button-color: #248dfa;
+    --button-color-on-hover: #61b3ff;
+    --button-text-color: black;
+    --button-border-color: #363636;
+    --cursor: pointer;
+    --dropdown-color: #f9f9f9;
+    --dropdown-color-on-hover: #D8D8D8;
+    --dropdown-text-color: black;
+    --footer-color: white;
+    --footer-copyright-color: #57aaf3;
+    --footer-copyright-two-numbers: white;
+    --font-family: "Comic Sans MS";
+}
+
+:root[theme='yeti']{
+    --background: linear-gradient(90deg, rgba(25,24,41,1) 0%, rgba(37,35,64,1) 50%, rgba(25,24,41,1) 100%);
+    --background-color: none;
+    --background-repeat: none;
+    --button-color: #0e0f0f;
+    --button-color-on-hover: #404040;
+    --button-text-color: white;
+    --button-border-color: #363636;
+    --cursor: pointer;
+    --dropdown-color: #22263d;
+    --dropdown-color-on-hover: #2c314d;
+    --dropdown-text-color: #ffffff;
+    --footer-color: white;
+    --footer-copyright-color: #616464;
+    --footer-copyright-two-numbers: white;
+    --font-family: Verdana;
+}
+
+:root[theme='snso']{
+    --background: url('images/dwojecka.png');
+    --background-color: none;
+    --background-repeat: repeat;
+    --button-color: #0e0f0f;
+    --button-color-on-hover: #404040;
+    --button-text-color: white;
+    --button-border-color: #363636;
+    --body-cursor: url("images/kursor.png"), default;
+    --cursor: url("images/kursor.png"), default;
+    --dropdown-color: #22263d;
+    --dropdown-color-on-hover: #2c314d;
+    --dropdown-text-color: #ffffff;
+    --footer-color: white;
+    --footer-copyright-color: #616464;
+    --footer-copyright-two-numbers: red;
+    --font-family: Verdana;
+}
+
+@font-face {
+    font-family: "Comic Sans MS";
+    src: url("fonts/ComicSansMS3.ttf");
+}
+
+@font-face {
+    font-family: "Verdana";
+    src: url("fonts/Verdana.ttf");
+}
+
+html{
+    cursor: var(--body-cursor);
+}
+
+body {
+    cursor: var(--body-cursor);
+	text-align: center;
+	font-family: var(--font-family);
+    background: var(--background);
+	background-color: var(--background-color);
+}
+
+img {
+	padding-top: 10px;
+}
+
+footer {
+	color: var(--footer-color);
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1rem;
+}
+
+footer a{
+    color: var(--footer-copyright-color);
+    text-decoration: none;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    max-height: 70vh;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+@keyframes epilepsy {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+.blinking-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.dropbtn {
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    min-width: 120px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.but {
+	border: none;
+    position: relative;
+	display: inline-block;
+	background-color: var(--button-color);
+}
+
+.but.changed {
+	border: none;
+    position: relative;
+	display: inline-block;
+	background-color: var(--button-color-on-hover);
+}
+
+.butt{
+	padding: 16px;
+    font-size: 16px;
+	min-width: 120px;
+	color: var(--button-text-color);
+	z-index: 1;
+	border: 3px solid var(--button-border-color);
+}
+
+.butt p {
+    margin-block: 0;
+}
+
+.but a {
+    text-decoration: none;
+    cursor: var(--cursor);
+}
+
+.but :hover{
+	background-color: var(--button-color-on-hover);
+	display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--dropdown-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: var(--dropdown-text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: var(--cursor);
+}
+
+.dropdown-content a:hover {
+	background-color: var(--dropdown-color-on-hover);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.container {
+    display: inline-block;
+}
+
+#random-meme {
+    display: block;
+    object-fit: contain;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#btn-random-meme, #but5 {
+    cursor: var(--cursor);
+}
+
+#secret {
+    display: none;
+}
+
+/* Prevents blue overlay when image selected */
+
+/*IE9*/
+img::selection
+{
+    background-color:transparent;
+}
+img::-moz-selection
+{
+    background-color:transparent;
+}
+img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    /*IE10*/
+    -ms-user-select: none;
+    user-select: none;
+
+    /*You just need this if you are only concerned with android and not desktop browsers.*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
